@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/build",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/local/include/wx-3.2  -pthread -std=gnu++11 -o CMakeFiles/GraphCalc.dir/src/main.cpp.o -c /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/main.cpp",
+  "file": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/build",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/local/include/wx-3.2  -pthread -std=gnu++11 -o CMakeFiles/GraphCalc.dir/src/frame.cpp.o -c /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/frame.cpp",
+  "file": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/frame.cpp"
+},
+{
+  "directory": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/build",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__ -isystem /usr/local/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/local/include/wx-3.2  -pthread -std=gnu++11 -o CMakeFiles/GraphCalc.dir/src/draw.cpp.o -c /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/draw.cpp",
+  "file": "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/draw.cpp"
+}
+]
