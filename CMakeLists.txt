@@ -1,5 +1,5 @@
 #Command to compile without Neovim errors ! :
-#cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS_ON
+#cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 cmake_minimum_required(VERSION 3.0)
 project(GraphCalc)
@@ -20,6 +20,7 @@ set(SOURCES
     src/main.cpp
     src/frame.cpp
     src/draw.cpp
+    src/math.cpp
 )
 
 # Add executable target

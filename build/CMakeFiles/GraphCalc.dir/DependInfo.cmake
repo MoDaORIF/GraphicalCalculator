@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/draw.cpp" "CMakeFiles/GraphCalc.dir/src/draw.cpp.o" "gcc" "CMakeFiles/GraphCalc.dir/src/draw.cpp.o.d"
   "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/frame.cpp" "CMakeFiles/GraphCalc.dir/src/frame.cpp.o" "gcc" "CMakeFiles/GraphCalc.dir/src/frame.cpp.o.d"
   "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/main.cpp" "CMakeFiles/GraphCalc.dir/src/main.cpp.o" "gcc" "CMakeFiles/GraphCalc.dir/src/main.cpp.o.d"
+  "/mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/math.cpp" "CMakeFiles/GraphCalc.dir/src/math.cpp.o" "gcc" "CMakeFiles/GraphCalc.dir/src/math.cpp.o.d"
   )
 
 # Targets to which this target links.

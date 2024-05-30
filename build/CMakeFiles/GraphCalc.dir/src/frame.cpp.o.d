@@ -128,8 +128,7 @@ CMakeFiles/GraphCalc.dir/src/frame.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /usr/local/include/wx-3.2/wx/string.h \
- /usr/local/include/wx-3.2/wx/defs.h \
+ /usr/local/include/wx-3.2/wx/wx.h /usr/local/include/wx-3.2/wx/defs.h \
  /usr/local/include/wx-3.2/wx/platform.h \
  /usr/local/include/wx-3.2/wx/compiler.h \
  /usr/local/lib/wx/include/gtk3-unicode-3.2/wx/setup.h \
@@ -150,7 +149,10 @@ CMakeFiles/GraphCalc.dir/src/frame.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/local/include/wx-3.2/wx/chartype.h \
- /usr/local/include/wx-3.2/wx/features.h /usr/include/string.h \
+ /usr/local/include/wx-3.2/wx/features.h \
+ /usr/local/include/wx-3.2/wx/object.h \
+ /usr/local/include/wx-3.2/wx/memory.h \
+ /usr/local/include/wx-3.2/wx/string.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/11/stdlib.h \
  /usr/local/include/wx-3.2/wx/wxcrtbase.h /usr/include/wctype.h \
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
@@ -174,8 +176,6 @@ CMakeFiles/GraphCalc.dir/src/frame.cpp.o: \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
  /usr/local/include/wx-3.2/wx/iosfwrap.h \
- /usr/local/include/wx-3.2/wx/wx.h /usr/local/include/wx-3.2/wx/object.h \
- /usr/local/include/wx-3.2/wx/memory.h \
  /usr/local/include/wx-3.2/wx/msgout.h /usr/local/include/wx-3.2/wx/xti.h \
  /usr/local/include/wx-3.2/wx/rtti.h /usr/local/include/wx-3.2/wx/flags.h \
  /usr/local/include/wx-3.2/wx/xti2.h \
@@ -451,4 +451,38 @@ CMakeFiles/GraphCalc.dir/src/frame.cpp.o: \
  /usr/local/include/wx-3.2/wx/filectrl.h \
  /usr/local/include/wx-3.2/wx/mdi.h \
  /usr/local/include/wx-3.2/wx/gtk/mdi.h \
- /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/draw.h
+ /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/draw.h \
+ /usr/local/include/muParser.h /usr/local/include/muParserBase.h \
+ /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/local/include/muParserDef.h \
+ /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /usr/local/include/muParserFixes.h \
+ /usr/local/include/muParserTokenReader.h /usr/include/c++/11/cstring \
+ /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
+ /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /usr/local/include/muParserToken.h /usr/include/c++/11/cstddef \
+ /usr/local/include/muParserError.h /usr/local/include/muParserCallback.h \
+ /usr/local/include/muParserBytecode.h \
+ /usr/local/include/muParserTemplateMagic.h

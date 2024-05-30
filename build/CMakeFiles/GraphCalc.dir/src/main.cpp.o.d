@@ -128,8 +128,7 @@ CMakeFiles/GraphCalc.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/basic_string.tcc \
- /usr/local/include/wx-3.2/wx/string.h \
- /usr/local/include/wx-3.2/wx/defs.h \
+ /usr/local/include/wx-3.2/wx/wx.h /usr/local/include/wx-3.2/wx/defs.h \
  /usr/local/include/wx-3.2/wx/platform.h \
  /usr/local/include/wx-3.2/wx/compiler.h \
  /usr/local/lib/wx/include/gtk3-unicode-3.2/wx/setup.h \
@@ -150,7 +149,10 @@ CMakeFiles/GraphCalc.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/local/include/wx-3.2/wx/chartype.h \
- /usr/local/include/wx-3.2/wx/features.h /usr/include/string.h \
+ /usr/local/include/wx-3.2/wx/features.h \
+ /usr/local/include/wx-3.2/wx/object.h \
+ /usr/local/include/wx-3.2/wx/memory.h \
+ /usr/local/include/wx-3.2/wx/string.h /usr/include/string.h \
  /usr/include/strings.h /usr/include/c++/11/stdlib.h \
  /usr/local/include/wx-3.2/wx/wxcrtbase.h /usr/include/wctype.h \
  /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
@@ -174,8 +176,6 @@ CMakeFiles/GraphCalc.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/typeinfo \
  /usr/local/include/wx-3.2/wx/iosfwrap.h \
- /usr/local/include/wx-3.2/wx/wx.h /usr/local/include/wx-3.2/wx/object.h \
- /usr/local/include/wx-3.2/wx/memory.h \
  /usr/local/include/wx-3.2/wx/msgout.h /usr/local/include/wx-3.2/wx/xti.h \
  /usr/local/include/wx-3.2/wx/rtti.h /usr/local/include/wx-3.2/wx/flags.h \
  /usr/local/include/wx-3.2/wx/xti2.h \

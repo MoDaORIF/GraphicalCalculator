@@ -127,12 +127,8 @@ CMakeFiles/GraphCalc.dir/src/draw.cpp.o: \
  /usr/include/c++/11/bits/charconv.h \
  /usr/include/c++/11/bits/functional_hash.h \
  /usr/include/c++/11/bits/hash_bytes.h \
- /usr/include/c++/11/bits/basic_string.tcc /usr/include/c++/11/vector \
- /usr/include/c++/11/bits/stl_uninitialized.h \
- /usr/include/c++/11/bits/stl_vector.h \
- /usr/include/c++/11/bits/stl_bvector.h \
- /usr/include/c++/11/bits/vector.tcc /usr/local/include/wx-3.2/wx/wx.h \
- /usr/local/include/wx-3.2/wx/defs.h \
+ /usr/include/c++/11/bits/basic_string.tcc \
+ /usr/local/include/wx-3.2/wx/wx.h /usr/local/include/wx-3.2/wx/defs.h \
  /usr/local/include/wx-3.2/wx/platform.h \
  /usr/local/include/wx-3.2/wx/compiler.h \
  /usr/local/lib/wx/include/gtk3-unicode-3.2/wx/setup.h \
@@ -205,8 +201,11 @@ CMakeFiles/GraphCalc.dir/src/draw.cpp.o: \
  /usr/local/include/wx-3.2/wx/list.h /usr/local/include/wx-3.2/wx/hash.h \
  /usr/local/include/wx-3.2/wx/hashmap.h \
  /usr/local/include/wx-3.2/wx/wxcrt.h \
- /usr/local/include/wx-3.2/wx/arrstr.h \
- /usr/local/include/wx-3.2/wx/intl.h \
+ /usr/local/include/wx-3.2/wx/arrstr.h /usr/include/c++/11/vector \
+ /usr/include/c++/11/bits/stl_uninitialized.h \
+ /usr/include/c++/11/bits/stl_vector.h \
+ /usr/include/c++/11/bits/stl_bvector.h \
+ /usr/include/c++/11/bits/vector.tcc /usr/local/include/wx-3.2/wx/intl.h \
  /usr/local/include/wx-3.2/wx/localedefs.h \
  /usr/local/include/wx-3.2/wx/translation.h \
  /usr/local/include/wx-3.2/wx/language.h \
@@ -451,4 +450,39 @@ CMakeFiles/GraphCalc.dir/src/draw.cpp.o: \
  /usr/local/include/wx-3.2/wx/gtk/filectrl.h \
  /usr/local/include/wx-3.2/wx/filectrl.h \
  /usr/local/include/wx-3.2/wx/mdi.h \
- /usr/local/include/wx-3.2/wx/gtk/mdi.h
+ /usr/local/include/wx-3.2/wx/gtk/mdi.h /usr/local/include/muParser.h \
+ /usr/local/include/muParserBase.h /usr/include/c++/11/map \
+ /usr/include/c++/11/bits/stl_tree.h \
+ /usr/include/c++/11/ext/aligned_buffer.h \
+ /usr/include/c++/11/bits/stl_map.h \
+ /usr/include/c++/11/bits/stl_multimap.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
+ /usr/include/c++/11/bits/unique_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr.h \
+ /usr/include/c++/11/bits/shared_ptr_base.h \
+ /usr/include/c++/11/bits/allocated_ptr.h \
+ /usr/include/c++/11/ext/concurrence.h \
+ /usr/include/c++/11/bits/shared_ptr_atomic.h \
+ /usr/include/c++/11/bits/atomic_base.h \
+ /usr/include/c++/11/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/locale \
+ /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/11/bits/codecvt.h \
+ /usr/include/c++/11/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/11/bits/locale_conv.h /usr/local/include/muParserDef.h \
+ /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
+ /usr/local/include/muParserFixes.h \
+ /usr/local/include/muParserTokenReader.h /usr/include/c++/11/cstring \
+ /usr/include/c++/11/list /usr/include/c++/11/bits/stl_list.h \
+ /usr/include/c++/11/bits/list.tcc /usr/include/c++/11/stack \
+ /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
+ /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_stack.h \
+ /usr/local/include/muParserToken.h /usr/include/c++/11/cstddef \
+ /usr/local/include/muParserError.h /usr/local/include/muParserCallback.h \
+ /usr/local/include/muParserBytecode.h \
+ /usr/local/include/muParserTemplateMagic.h \
+ /mnt/c/Users/MoDa/workstation/C_CPP_RUST_PROJECT/cpp/3_gui/GraphCalc/src/math.h

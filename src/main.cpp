@@ -10,7 +10,7 @@ wxIMPLEMENT_APP(GraphCalc);
 
 bool GraphCalc::OnInit() {
 
-  MainFrame* frame = new MainFrame("test");
+  MainFrame* frame = new MainFrame("Graphical calculator");
   frame->Show(true);
   return true;
 }
