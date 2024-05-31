@@ -8,6 +8,7 @@
 #include <unordered_map>   // for std::unordered_map
 #include <vector>          // for std::vector
 #include <set>             // for std::set
+#include <wx/wx.h>         // for wxWidgets
 
 // Function to apply an operator to two operands
 using std::istringstream;
@@ -123,7 +124,7 @@ int main() {
     std::cout << "Expression math: ";
     std::cin >> math;
 
-    vector<double> results;
+    vector<wxPoint> points;
 
     try {
         // Detect all variables in the expression
@@ -136,13 +137,18 @@ int main() {
                 variable_values[var] = static_cast<double>(i);
             }
             double result = evaluateExpression(math, variable_values);
-            results.push_back(result);
+            points.push_back(wxPoint(i, static_cast<int>(result)));
         }
 
-        // Output the results
+        // Plot the points (this is just a placeholder, actual drawing should be done in a wxWidgets context)
+        // Assuming 'dc' is a valid wxDC object provided by wxWidgets framework
+        // wxDC dc; // This line is just a placeholder
+        // dc.DrawLines(points.size(), &points[0]);
+
+        // Output the results for debugging
         std::cout << "Results: ";
-        for (const auto &result : results) {
-            std::cout << result << " ";
+        for (const auto &point : points) {
+            std::cout << "(" << point.x << ", " << point.y << ") ";
         }
         std::cout << std::endl;
 
@@ -152,3 +158,4 @@ int main() {
 
     return 0;
 }
+
