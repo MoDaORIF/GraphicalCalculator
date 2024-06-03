@@ -1,18 +1,18 @@
 #ifndef DRAW_H
 #define DRAW_H
 
-#include "frame.h"
 #include <muParser.h>
 #include <set> // for std::set
 #include <string>
 #include <unordered_map> // for std::unordered_map
 #include <wx/wx.h>
 
-class Draw : public MainFrame {
+class Draw {
 
 public:
   Draw(wxDC &dc); // Constructor accepting wxDC reference
-  std::vector<wxPoint> plotLines(std::string &user_input);
+  std::vector<wxPoint> plotLines(std::string &user_input, int screen_height,
+                                 int screen_width);
   void OnButtonClick(wxCommandEvent &event);
 
 private:
@@ -30,5 +30,7 @@ private:
   int calculateLinePoints(const std::string &expr, const int xMin,
                           const int xMax, int scale,
                           std::vector<wxPoint> *pwxPoint);
+  int screen_width;
+  int screen_height;
 };
 #endif // DRAW_H

@@ -87,15 +87,16 @@ void MainFrame::OnPaint(wxPaintEvent &event) {
       wxSize window_size = GetSize();
       int screen_width = window_size.GetWidth();
       int screen_height = window_size.GetHeight();
-      // Display the size using std::cout
-      std::cout << "Screen size (parent) : " << screen_height << " x "
-                << screen_width << std::endl;
+
+      std::cout << "Screen size (from parent): " << screen_width << " x "
+                << screen_height << std::endl;
 
       wxPaintDC dc(this);
       Draw draw(dc);
 
       try {
-        std::vector<wxPoint> wxPoints = draw.plotLines(user_input);
+        std::vector<wxPoint> wxPoints =
+            draw.plotLines(user_input, screen_height, screen_width);
         dc.DrawLines(wxPoints.size(), &wxPoints[0], xOffset, yOffset);
 
       } catch (std::exception &e) {

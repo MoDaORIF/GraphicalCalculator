@@ -1,5 +1,4 @@
 // FIX: x and y coordinate are swapped. Fix this
-#include "frame.h"
 #include <cctype>   // for std::isdigit
 #include <cmath>    // for std::pow
 #include <iostream> // for std::cin, std::cout
@@ -174,15 +173,16 @@ int Draw::calculateLinePoints(const std::string &expr, const int xMin,
     }
 
     // Output the results for debugging
-    std::cout << "Results: ";
-    for (const auto &point : points) {
-      std::cout << "Carthesien  : " << "(" << point.x << ", " << point.y * -1
-                << ") " << std::endl;
-      std::cout << "ui          : " << "(" << point.x << ", " << point.y << ") "
-                << std::endl;
-      std::cout << std::endl;
-    }
-    std::cout << std::endl;
+    // std::cout << "Results: ";
+    // for (const auto &point : points) {
+    //   std::cout << "Carthesien  : " << "(" << point.x << ", " << point.y * -1
+    //             << ") " << std::endl;
+    //   std::cout << "ui          : " << "(" << point.x << ", " << point.y <<
+    //   ") "
+    //             << std::endl;
+    //   std::cout << std::endl;
+    // }
+    // std::cout << std::endl;
 
     // update pwxPoints with the calculated points
     *pwxPoint = points;
@@ -194,15 +194,19 @@ int Draw::calculateLinePoints(const std::string &expr, const int xMin,
   return 0;
 }
 
-std::vector<wxPoint> Draw::plotLines(std::string &user_input) {
+std::vector<wxPoint> Draw::plotLines(std::string &user_input, int height,
+                                     int width) {
 
   int xMin = 0;
   int xMax = 100 + 1;
   int scale = 10; // Scale the parabola for better visibility
+  
+  screen_width = width;
+  screen_height = height;
 
   std::cout << "DrawHorizontalLine: " << user_input << std::endl;
-  std::cout << "Screen size (child) : " << screen_height << " x "
-            << screen_width << std::endl;
+  std::cout << "Screen size (child) : " << screen_width << " x "
+            << screen_height << std::endl;
 
   // Evaluate expression and generate points
   std::vector<wxPoint> wxPoints;

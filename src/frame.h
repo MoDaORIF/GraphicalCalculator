@@ -10,10 +10,7 @@ public:
   MainFrame(){};
   MainFrame(const wxString &title);
   void OnButtonClick(wxCommandEvent &event);
-  // wxSize GetSizeOfScreen();
-
-  int screen_width;
-  int screen_height;
+  void GetSizeOfScreen();
 
 private:
   void OnQuit(wxCommandEvent &event);
