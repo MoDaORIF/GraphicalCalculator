@@ -42,11 +42,6 @@ wxBEGIN_EVENT_TABLE(MainFrame, wxFrame) EVT_MENU(ID_QUIT, MainFrame::OnQuit)
   vbox->Add(m_textCtrl, 0, wxALL | wxCENTER, 10);
 
   panel->SetSizer(vbox);
-
-  // Old button
-  // button = new wxButton(panel, wxID_ANY, "Click Me", wxPoint(100, 50),
-  //                       wxDefaultSize);
-  // button->Bind(wxEVT_BUTTON, &MainFrame::OnButtonClick, this);
 }
 
 void MainFrame::PaintCurve() {
@@ -58,28 +53,18 @@ void MainFrame::PaintCurve() {
 
 // Public
 void MainFrame::OnButtonClick(wxCommandEvent &event) {
-  // wxMessageDialog dialog(this, "Button clicked!", "Info",
-  //                        wxOK | wxICON_INFORMATION);
-  // dialog.ShowModal();
-
   // Get the value of the text box
   user_input = m_textCtrl->GetValue().ToStdString();
 
   std::cout << "OnButtonClick :" << user_input << std::endl;
-  // Display user input in dialog box
-  // wxMessageDialog dialog(this, user_input, "User input",
-  //                       wxOK | wxICON_INFORMATION);
-  // dialog.ShowModal();
-
-  // Set graph function to user input
-  // Instanciate Draw class
-  // wxPaintDC dc(this);
-  // Draw draw(dc);
-  // draw.graphFunction = userInput;
 
   PaintCurve();
 }
 
+wxSize MainFrame::GetSizeOfScreen() {
+  wxSize window_size = GetSize();
+  return window_size;
+}
 // Private
 void MainFrame::OnQuit(wxCommandEvent &WXUNUSED(event)) { Close(true); }
 
@@ -88,10 +73,17 @@ void MainFrame::OnPaint(wxPaintEvent &event) {
   if (paintOnFrame) {
     static std::string last_user_input;
     if (user_input != last_user_input) {
+      last_user_input = user_input;
+
+      wxSize window_size = GetSize();
+      int screen_width = window_size.GetWidth();
+      int screen_height = window_size.GetHeight();
+
       wxPaintDC dc(this);
       Draw draw(dc);
-      last_user_input = user_input;
-      draw.DrawHorizontalLine(user_input);
+
+      draw.DrawHorizontalLine(user_input, screen_width, screen_height);
+      // TODO: receivre wxPoints and then DrawLines here
     }
   }
 }

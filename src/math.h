@@ -4,15 +4,16 @@
 #include <set> // for std::set
 #include <string>
 #include <unordered_map> // for std::unordered_map
-#include <wx/wx.h>
 #include <vector>
+#include <wx/wx.h>
 
 class Math {
 
 public:
-  Math();
-  int main(const std::string &expr, int xMin, int xMax, int scale, int xOffset,
-           int yOffset, std::vector<wxPoint> *pwxPoint);
+  Math(){};
+  int main(const std::string &expr, int screen_width, int screen_height,
+           int xMin, int xMax, int scale, int xOffset, int yOffset,
+           std::vector<wxPoint> *pwxPoint);
 
 private:
   double applyOperator(double a, double b, char op);

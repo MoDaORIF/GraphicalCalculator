@@ -1,8 +1,10 @@
 // FIX: x and y coordinate are swapped. Fix this
 #include "math.h"
-#include <cctype>        // for std::isdigit
-#include <cmath>         // for std::pow
-#include <iostream>      // for std::cin, std::cout
+#include "frame.h"
+#include <cctype>   // for std::isdigit
+#include <cmath>    // for std::pow
+#include <iostream> // for std::cin, std::cout
+#include <ostream>
 #include <set>           // for std::set
 #include <sstream>       // for std::istringstream
 #include <stack>         // for std::stack
@@ -18,20 +20,38 @@ using std::set;
 using std::unordered_map;
 using std::vector;
 
-Math::Math() {}
-
 double Math::applyOperator(double a, double b, char op) {
+
+  int scale = 100;
+
+  // Convert wxSize to int variables
+
+  //std::cout << "height: " << screen_height << "width: " << screen_width
+   //         << std::endl;
+
   switch (op) {
+
+    // (a op b * (-1)) in each case because {0;0} is a the top left of the
+    // window divided by scale to scale down and make the lines more visible
+    // TODO: Scale has to be passed by reference. Scale is a GUI slider
+    // FIX: Translate carthesian coordinates into screen coordinates
+    // Exemple: -25;25 => 75;75
+
+    // The basic algorithm to translate from cartesian coordinates to screen
+    // coordinates are
+    // screenX = cartX + screen_width / 2
+    // screenY = screen_height / 2 - cartY
+
   case '+':
-    return a + b;
+    return (a + b);
   case '-':
-    return a - b;
+    return (a - b);
   case '*':
-    return a * b;
+    return (a * b);
   case '/':
-    return a / b;
+    return (a / b);
   case '^':
-    return std::pow(a, b);
+    return (std::pow(a, b)) * -1 / 100;
   default:
     throw std::runtime_error("Invalid operator");
   }
@@ -124,8 +144,18 @@ set<char> Math::detectVariables(const std::string &expr) {
   return variables;
 }
 
-int Math::main(const std::string &expr, int xMin, int xMax, int scale,
-               int xOffset, int yOffset, vector<wxPoint> *pwxPoint) {
+int Math::main(const std::string &expr, const int screen_width,
+               const int screen_height, const int xMin, const int xMax,
+               int scale, int xOffset, int yOffset, vector<wxPoint> *pwxPoint) {
+
+  MainFrame *test = new MainFrame;
+  wxSize var_test = test->GetSizeOfScreen();
+  int t1 = var_test.GetWidth();
+  int t2 = var_test.GetHeight();
+
+  // Display the size using std::cout
+  std::cout << "Screen size: " << t1 << " x " << t2
+            << std::endl;
 
   // Ask the user for a mathematical expression
   std::cout << "User input: " << expr;
@@ -150,7 +180,11 @@ int Math::main(const std::string &expr, int xMin, int xMax, int scale,
     // Output the results for debugging
     std::cout << "Results: ";
     for (const auto &point : points) {
-      std::cout << "(" << point.x << ", " << point.y << ") ";
+      std::cout << "Carthesien  : " << "(" << point.x << ", " << point.y * -1
+                << ") " << std::endl;
+      std::cout << "ui          : " << "(" << point.x << ", " << point.y << ") "
+                << std::endl;
+      std::cout << std::endl;
     }
     std::cout << std::endl;
 

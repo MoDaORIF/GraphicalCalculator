@@ -1,15 +1,16 @@
 #ifndef DRAW_H
 #define DRAW_H
 
+#include <muParser.h>
 #include <string>
 #include <wx/wx.h>
-#include <muParser.h>
 
 class Draw {
 
 public:
   Draw(wxDC &dc); // Constructor accepting wxDC reference
-  void DrawHorizontalLine(std::string &user_input);
+  void DrawHorizontalLine(std::string &user_input, int screen_width,
+                          int screen_height);
   void OnButtonClick(wxCommandEvent &event);
 
 private:

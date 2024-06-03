@@ -13,4 +13,6 @@ bool GraphCalc::OnInit() {
   MainFrame* frame = new MainFrame("Graphical calculator");
   frame->Show(true);
   return true;
+
+  // TODO: Parent des autres classes
 }
