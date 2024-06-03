@@ -61,10 +61,15 @@ void MainFrame::OnButtonClick(wxCommandEvent &event) {
   PaintCurve();
 }
 
-wxSize MainFrame::GetSizeOfScreen() {
-  wxSize window_size = GetSize();
-  return window_size;
-}
+// wxSize MainFrame::GetSizeOfScreen() {
+//   wxSize window_size = GetSize();
+//   int t1 = window_size.GetWidth();
+//   int t2 = window_size.GetHeight();
+//
+//   // Display the size using std::cout
+//   return window_size;
+// }
+
 // Private
 void MainFrame::OnQuit(wxCommandEvent &WXUNUSED(event)) { Close(true); }
 
@@ -75,15 +80,27 @@ void MainFrame::OnPaint(wxPaintEvent &event) {
     if (user_input != last_user_input) {
       last_user_input = user_input;
 
+      int xOffset = 1000;
+      int yOffset = 500;
+      // FIX: do not create a new frame. GetSizeOfScreen() of the current
+      // instance.
       wxSize window_size = GetSize();
       int screen_width = window_size.GetWidth();
       int screen_height = window_size.GetHeight();
+      // Display the size using std::cout
+      std::cout << "Screen size (parent) : " << screen_height << " x "
+                << screen_width << std::endl;
 
       wxPaintDC dc(this);
       Draw draw(dc);
 
-      draw.DrawHorizontalLine(user_input, screen_width, screen_height);
-      // TODO: receivre wxPoints and then DrawLines here
+      try {
+        std::vector<wxPoint> wxPoints = draw.plotLines(user_input);
+        dc.DrawLines(wxPoints.size(), &wxPoints[0], xOffset, yOffset);
+
+      } catch (std::exception &e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+      }
     }
   }
 }

@@ -20,7 +20,7 @@ set(SOURCES
     src/main.cpp
     src/frame.cpp
     src/draw.cpp
-    src/math.cpp
+    # src/math.cpp # class Math merged into class Draw
 )
 
 # Add executable target
