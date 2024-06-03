@@ -42,6 +42,14 @@ wxBEGIN_EVENT_TABLE(MainFrame, wxFrame) EVT_MENU(ID_QUIT, MainFrame::OnQuit)
   vbox->Add(m_textCtrl, 0, wxALL | wxCENTER, 10);
 
   panel->SetSizer(vbox);
+
+  m_slider =
+      new wxSlider(panel, wxID_ANY, 50, 0, 100, wxPoint(30, 40),
+                   wxSize(250, wxDefaultCoord), wxSL_HORIZONTAL | wxSL_LABELS);
+  m_label =
+      new wxStaticText(panel, wxID_ANY, "Slider Value: 50", wxPoint(30, 100));
+
+  Bind(wxEVT_SLIDER, &MainFrame::OnSliderScroll, this, m_slider->GetId());
 }
 
 void MainFrame::PaintCurve() {
@@ -49,6 +57,11 @@ void MainFrame::PaintCurve() {
   paintOnFrame = true;
   // Refresh the windows to call MainFrame::OnPaint
   Refresh();
+}
+
+void MainFrame::OnSliderScroll(wxCommandEvent &event) {
+  int value = m_slider->GetValue();
+  m_label->SetLabel(wxString::Format("Slider Value: %d", value));
 }
 
 // Public
@@ -80,13 +93,12 @@ void MainFrame::OnPaint(wxPaintEvent &event) {
     if (user_input != last_user_input) {
       last_user_input = user_input;
 
-      int xOffset = 1000;
-      int yOffset = 500;
-      // FIX: do not create a new frame. GetSizeOfScreen() of the current
-      // instance.
       wxSize window_size = GetSize();
       int screen_width = window_size.GetWidth();
       int screen_height = window_size.GetHeight();
+
+      int xOffset = screen_width / 2;
+      int yOffset = screen_height / 2;
 
       std::cout << "Screen size (from parent): " << screen_width << " x "
                 << screen_height << std::endl;

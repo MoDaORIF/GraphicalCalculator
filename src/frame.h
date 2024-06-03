@@ -23,6 +23,11 @@ private:
   bool paintOnFrame = false;
   std::string user_input;
 
+  void OnSliderScroll(wxCommandEvent &event);
+
+  wxSlider *m_slider;
+  wxStaticText *m_label;
+
   wxDECLARE_EVENT_TABLE();
 };
 

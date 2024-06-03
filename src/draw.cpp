@@ -26,25 +26,7 @@ using std::vector;
 
 double Draw::applyOperator(double a, double b, char op) {
 
-  int scale = 100;
-
-  // Convert wxSize to int variables
-
-  // std::cout << "height: " << screen_height << "width: " << screen_width
-  //          << std::endl;
-
   switch (op) {
-
-    // (a op b * (-1)) in each case because {0;0} is a the top left of the
-    // window divided by scale to scale down and make the lines more visible
-    // TODO: Scale has to be passed by reference. Scale is a GUI slider
-    // FIX: Translate carthesian coordinates into screen coordinates
-    // Exemple: -25;25 => 75;75
-
-    // The basic algorithm to translate from cartesian coordinates to screen
-    // coordinates are
-    // screenX = cartX + screen_width / 2
-    // screenY = screen_height / 2 - cartY
 
   case '+':
     return (a + b);
@@ -55,7 +37,7 @@ double Draw::applyOperator(double a, double b, char op) {
   case '/':
     return (a / b);
   case '^':
-    return (std::pow(a, b)) * -1 / 100;
+    return std::pow(a, b);
   default:
     throw std::runtime_error("Invalid operator");
   }
@@ -173,16 +155,24 @@ int Draw::calculateLinePoints(const std::string &expr, const int xMin,
     }
 
     // Output the results for debugging
-    // std::cout << "Results: ";
-    // for (const auto &point : points) {
-    //   std::cout << "Carthesien  : " << "(" << point.x << ", " << point.y * -1
-    //             << ") " << std::endl;
-    //   std::cout << "ui          : " << "(" << point.x << ", " << point.y <<
-    //   ") "
-    //             << std::endl;
-    //   std::cout << std::endl;
-    // }
-    // std::cout << std::endl;
+    std::cout << "Results: ";
+    for (auto &point : points) {
+      // The basic algorithm to translate from cartesian coordinates to screen
+      // coordinates are
+      // xt=xc+(width/2)
+      // yt=(height/2)−yc
+      // point.y = (point.y + (screen_width / 2)) * -1;
+      // point.x = ((screen_height / 2) - point.x) * -1;
+      std::cout << std::endl;
+      std::cout << "carthesian : " << "(" << point.y << ", " << point.x << ") "
+                << std::endl;
+      std::cout << "screen     : " << "(" << point.y + (screen_width / 2)
+                << ", " << (screen_height / 2) - point.x << ") " << std::endl;
+
+      point.x *= scale;
+      point.y *= scale * -1; // otherwise graph is reversed on y axis
+    }
+    std::cout << std::endl;
 
     // update pwxPoints with the calculated points
     *pwxPoint = points;
@@ -197,10 +187,12 @@ int Draw::calculateLinePoints(const std::string &expr, const int xMin,
 std::vector<wxPoint> Draw::plotLines(std::string &user_input, int height,
                                      int width) {
 
-  int xMin = 0;
+  int xMin = -100;
   int xMax = 100 + 1;
+
+  // TODO: Scale has to be passed by reference. Scale is a GUI slider
   int scale = 10; // Scale the parabola for better visibility
-  
+
   screen_width = width;
   screen_height = height;
 
@@ -214,8 +206,4 @@ std::vector<wxPoint> Draw::plotLines(std::string &user_input, int height,
   calculateLinePoints(user_input, xMin, xMax, scale, &wxPoints);
 
   return wxPoints;
-
-  // Draw lines connecting the points
-  // m_dc.DrawLines(wxPoints.size(), wxPoints.data());
-  // m_dc.DrawLines(wxPoints.size(), &wxPoints[0], xOffset, yOffset);
 }
